@@ -1,0 +1,98 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcgkakrwauumy"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_ut85n"]
+
+[node name="MyFirstPlugin" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -183.0
+offset_top = -99.0
+offset_right = -24.0
+offset_bottom = -21.0
+grow_horizontal = 0
+grow_vertical = 0
+alignment = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="VBoxContainer/MarginContainer"]
+self_modulate = Color(1, 1, 1, 0.352941)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+text = "Particle Controls"
+horizontal_alignment = 1
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="StartButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Play Particles from Start"
+text = "S"
+
+[node name="PauseButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Pause Particles"
+toggle_mode = true
+text = "P"
+
+[node name="StopButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Stop Particles"
+text = "X"
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="LoopButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Loop Particles"
+toggle_mode = true
+text = "L"
+
+[node name="AffectNeighborsButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Affect Neighboring Particles"
+toggle_mode = true
+text = "AN"
+
+[node name="AffectChildrenButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Affect Child Particles"
+toggle_mode = true
+text = "AC"
+
+[node name="Scrub" type="HSlider" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_icons/grabber_disabled = SubResource("ImageTexture_ut85n")
+step = 0.0
+editable = false
