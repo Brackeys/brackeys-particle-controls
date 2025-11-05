@@ -157,6 +157,8 @@ func _on_selection_changed():
 		director.create_previews()
 		if was_playing:
 			director.play()
+		else:
+			_on_director_state_changed()
 		show()
 	else:
 		director.clean_up_previews()
